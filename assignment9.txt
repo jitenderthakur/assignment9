@@ -1,0 +1,26 @@
+QUES: Use the text file abc.txt and write its contents in another file xyz.txt. Print the contents of xyz.txt for verification.
+          package acadview;
+ANS:
+
+import java.io.*;
+ class Copy 
+  {
+     
+
+     public static void main(String[] args) throws IOException
+     {
+         File file1 =new File("C:\\Users\\Dell\\Desktop\\abc.txt");
+        File file2= new File("C:\\Users\\Dell\\Desktop\\xyz.txt");
+        FileReader in = new FileReader(file1);
+        FileWriter out = new FileWriter(file2);
+        int c;
+        while((c=in.read())!=-1)
+        {
+            out.write((char)c);
+         System.out.print(""+(char)c);
+        }
+           in.close();
+           out.close();
+     }
+     
+}
